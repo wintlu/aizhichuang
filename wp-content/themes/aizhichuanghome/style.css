@@ -1,0 +1,47 @@
+/*
+ Theme Name: aizhichuanghome
+ Theme URI: http://theme.fm
+ Description: home theme for aizhichuang.com
+ Author: Wint Lu
+ Author URI: http: //theme.fm
+ Template: twentyeleven
+ Version: 1.0
+ */
+
+@import url("../twentyeleven/style.css");
+
+#branding img#logo {
+	height: auto;
+	margin-bottom: -7px;
+	width: auto;
+}
+
+#branding hgroup {
+	margin: 0 7.6% 0 0;
+}
+
+#home-container {
+}
+
+#home-slider {
+	padding: 0 1em 0 1em;
+}
+
+#home-news{
+	padding: 1.2em;
+}
+
+#home-feature-list{
+	list-style: none;
+	height: auto;
+}
+
+#home-feature-list a{
+	color: black;
+}
+
+#home-feature-list > li{
+	float:left;
+	text-align:left;
+	width:33%;
+}
