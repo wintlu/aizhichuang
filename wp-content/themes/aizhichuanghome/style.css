@@ -10,10 +10,23 @@
 
 @import url("../twentyeleven/style.css");
 
+body {
+	background: #FFFFFF !important;
+}
+
+#branding{
+	border-top: none;
+}
+
 #branding img#logo {
 	height: auto;
 	margin-bottom: -7px;
 	width: auto;
+}
+
+#branding #searchform {
+	right: 40px;
+	top: 1.5em;
 }
 
 #branding hgroup {
@@ -34,10 +47,20 @@
 #home-feature-list{
 	list-style: none;
 	height: auto;
+	text-decoration: none;
 }
 
 #home-feature-list a{
-	color: black;
+}
+
+#home-feature-list .feature-sublist{
+	list-style: none;
+}
+
+#home-feature-list .list-item h4{
+	font-size: 1.4em;
+	color: #111111;
+	font-weight: 200;
 }
 
 #home-feature-list > li{

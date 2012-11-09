@@ -26,7 +26,9 @@ if (!defined('ABSPATH'))
 
 <div id="home-container" class="">
 	<div id="home-slider">
-		<img src="<?php header_image(); ?>" alt="" width="98%"/>
+		<a href="./shaoliang/" title="Visit our couple's site">
+			<img src="<?php header_image(); ?>" alt="" width="98%"/>
+		</a>
 	</div>
 	<div id="home-create-account" align="center">
 		<a href="./wp-login.php?action=register"><img width="45%" src="<?php echo get_stylesheet_directory_uri() . '/create-free-account-off.png' ?>"/> </a>
@@ -47,44 +49,63 @@ if (!defined('ABSPATH'))
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>
 			<?php endif ?>
 	</div>
-	<!--
 	<div id="home-feature-list-container">
 		<ul id="home-feature-list">
-			<li>
-				<a>Our site</a>
-				<ul>
+			<li class="list-item">
+				<h4>Our services</h4>
+				<ul class="feature-sublist">
 					<li>
-						<a href="#">Create free account</a> 
+						<a href="#">Publish your pages</a> 
 					</li>
 					<li>
-						<a href="#">Website themes</a>
+						<a href="#">Share your photos</a>
+					</li>
+					<li>
+						<a href="#">Beautify with themes</a>
+					</li>
+					<li>
+						<a href="#">Track your site visitors</a>
+					</li>
+					<li>
+						<a href="#">Connect with social networks</a>
+					</li>
+					<li>
+						<a href="#">Mobile support</a>
 					</li>
 				</ul>
 			</li>
-			<li>
-				<a>Our site</a>
-				<ul>
+			<li class="list-item">
+				<h4>Site map</h4>
+				<ul class="feature-sublist">
 					<li>
-						<a href="#">Create free account</a> 
+						<a href="#">Themes</a> 
 					</li>
 					<li>
-						<a href="#">Website themes</a>
+						<a href="#">Support</a>
+					</li>
+					<li>
+						<a href="#">Register</a>
+					</li>
+					<li>
+						<a href="./wp-login.php">Login</a>
+					</li>
+					<li>
+						<a href="#">Demo</a>
 					</li>
 				</ul>
 			</li>
-			<li>
-				<a>Our site</a>
-				<ul>
+			<li class="list-item">
+				<h4>See popular couples</h4>
+				<ul class="feature-sublist">
 					<li>
-						<a href="#">Create free account</a> 
+						<a href="#">Tian & Mike</a> 
 					</li>
 					<li>
-						<a href="#">Website themes</a>
+						<a href="#">Shao & Will</a>
 					</li>
 				</ul>
 			</li>
 		</ul>
 	</div>
-	-->
 </div><!-- end of #featured -->
 <?php get_footer(); ?>
