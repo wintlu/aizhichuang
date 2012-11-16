@@ -1,0 +1,125 @@
+/*
+ Theme Name: aizhichuang.com mainsite
+ Theme URI: http://theme.fm
+ Description: home theme for aizhichuang.com
+ Author: Wint Lu
+ Author URI: http: //theme.fm
+ Template: the-bootstrap
+ Version: 1.0
+ */
+
+/* Large desktop */
+@media (min-width: 1200px) {  }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { }
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { }
+
+
+@import url("../the-bootstrap/style.css");
+
+
+body {
+	background-image: url("./images/wrap-background.png");
+	position: relative;
+}
+
+#page{
+	background-color: #F3EFE4;
+}
+
+.container-narrow{
+	margin: 0 auto;
+}
+
+#header-controls {
+	text-align: right;
+}
+
+#header-controls div {
+	margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+	#myCarousel {
+		width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+		overflow: auto;
+	}
+}
+
+@media (max-width: 979px) {
+	#myCarousel {
+		display: none;
+	}
+}
+
+.container-narrow{
+	max-width: 810px;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+	.container-narrow{
+		max-width: 960px;
+	}
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	.container-narrow{
+		max-width: 600px;
+	}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.container-narrow{
+		max-width: 600px;
+	}
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+	.container-narrow{
+		max-width: 400px;
+	}
+}
+
+.theme-preview{
+	text-align: center;
+	padding-top: 1em;
+	padding-left: 2em;
+}
+.theme-preview p{
+	font-weight: bold;
+}
+
+.lace1{
+	background: url("./images/huabian.jpg") repeat-x;
+	height: 76px;
+	overflow: hidden;
+	margin: 0px;
+}
+
+#site-themes-preview{
+	background-color: white;
+	padding: 2em 0;
+}
+#site-navigation, #colophon{
+	background-color: #373737;
+	padding-top: 2em;
+}
+#site-navigation h4{
+	color: #DDDDDD;
+}
+
+#colophon{
+	color: #AAAAAA;
+}

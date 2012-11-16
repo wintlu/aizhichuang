@@ -1,5 +1,6 @@
 #Project specific
 wp-config.php
+*.log
 
 #################
 ## Eclipse
