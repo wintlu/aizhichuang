@@ -51,29 +51,34 @@ if (!defined('ABSPATH'))
 
 <hr class="lace1">
 
-<div id="site-themes-preview" class="rows clearfix">
-	<div class="span3">
-		<a href="<?php echo wp_login_url() . '?action=register'?>">
-			<img src="<?php echo get_stylesheet_directory_uri() . '/images/create-account.png'?>"/>
-		</a>
-	</div>
-	<div class="span3 theme-preview">
-		<p class="figcaption">Autumn</p>
+<div id="site-themes-preview" class="clearfix">
+	<figure class="span3 theme-preview">
+		<figcaption>Autumn</figcaption> 
 		<a href="./themes?id=1">
 			<img src="<?php echo get_stylesheet_directory_uri() . '/images/template1-square.jpg'?>"/>
 		</a>
-	</div>
-	<div class="span3 theme-preview">
-		<p class="figcaption">Ocean</p>
+	</figure>
+	<figure class="span3 theme-preview">
+		<figcaption>Ocean</figcaption>
 		<a href="./themes?id=2">
 			<img src="<?php echo get_stylesheet_directory_uri() . '/images/template2-square.jpg'?>"/>
 		</a>
-	</div>
-	
+	</figure>
+	<figure class="span3 theme-preview">
+		<figcaption>Ocean</figcaption>
+		<a href="./themes?id=2">
+			<img src="<?php echo get_stylesheet_directory_uri() . '/images/template2-square.jpg'?>"/>
+		</a>
+	</figure>
+	<figure class="span3">
+		<a href="<?php echo wp_login_url() . '?action=register'?>">
+			<img src="<?php echo get_stylesheet_directory_uri() . '/images/create-account.png'?>"/>
+		</a>
+	</figure>
 </div>
 
-<div id="site-navigation" class="rows clearfix">
-	<div class="span3">
+<div id="site-navigation" class="clearfix">
+	<div class="span4">
 		<h4>Our services</h4>
 		<ul class="feature-sublist">
 			<li>
@@ -96,7 +101,7 @@ if (!defined('ABSPATH'))
 			</li>
 		</ul>
 	</div>
-	<div class="span3">
+	<div class="span4">
 		<h4>Site map</h4>
 		<ul class="feature-sublist">
 			<li>
@@ -116,7 +121,7 @@ if (!defined('ABSPATH'))
 			</li>
 		</ul>
 	</div>
-	<div class="span3">
+	<div class="span4">
 		<h4>See popular couples</h4>
 		<ul class="feature-sublist">
 			<li>

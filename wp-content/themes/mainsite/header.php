@@ -24,10 +24,10 @@
 	</head>
 	
 	<body <?php body_class(); ?>>
-		<div class="container-narrow" style="margin-top: 0px">
+		<div class="container" style="margin-top: 0px">
 			<div id="page" class="hfeed row">
 				<?php tha_header_before(); ?>
-				<header id="branding" role="banner" class="span10">
+				<header id="branding" role="banner" class="span12">
 					<?php tha_header_top();
 					wp_nav_menu( array(
 						'container'			=>	'nav',
