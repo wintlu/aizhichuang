@@ -30,38 +30,9 @@
 <body <?php body_class(); ?>>
 <div id="page" class="container-narrow">
 	<header id="masthead" class="site-header" role="banner">
-		<div id="header-meta-container">
-			<div id="header-meta">
-				<img src="<?php echo get_template_directory_uri() . '/images/user-thumbnail.jpg'?>" alt="header small" />
-					<table class="header-meta-info">
-						<tr>
-							<td>
-								131
-								<div>VISIT</div>		
-							</td>
-							<td>
-								21
-								<div>TODAY</div>
-							</td>
-							<td>
-								51
-								<div>COLLECT</div>
-							</td>
-						</tr>
-					</table>
-			</div>
-		</div>
 		<div>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
 		</div>
-		<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-		<?php endif; ?>
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<!-- <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?> -->
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-
 	<div id="main" class="wrapper">

@@ -28,10 +28,6 @@ body {
 	padding: 2em;
 }
 
-#masthead .site-title, #masthead .site-description {
-	margin-left: 160px;
-}
-
 #masthead .site-description{
 	color: #555555;
 }
@@ -40,28 +36,13 @@ body {
 	color: white;
 }
 
-#header-meta-container {
-	position: relative;
-}
-
-#header-meta {
-	height: 10em;
-	width: 10em;
-	position: absolute;
-}
-
-.header-meta-info {
-	background-color: white;
-	color: black;
-	width: 100%;
-	text-align: center;
-	font-size: 0.5em;
-}
-
 #colophon {
 	padding: 5px;
 }
 
+.meta-info-item{
+	padding: 0.5em 0;
+}
 /**
  *
  */
