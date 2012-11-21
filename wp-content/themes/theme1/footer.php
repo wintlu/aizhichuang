@@ -10,7 +10,7 @@
 	<hr>
 	<footer id="colophon" role="contentinfo">
 		<div class="site-info">
-			<p class="text-info">Powered by  <a href="<?php get_dashboard_blog(); ?>">aizhichuang.com</a></p>
+			<p class="text-info">@2012 <a href="<?php get_dashboard_blog(); ?>">aizhichuang.com</a></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

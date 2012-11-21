@@ -11,7 +11,7 @@ if (!defined('ABSPATH'))
 	<div class="row">
 		<figure class="span3 theme-preview">
 		<figcaption>Autumn</figcaption> 
-		<a href="./themes?id=1">
+		<a href="<?php echo get_admin_url()  . 'themes.php'?>">
 			<img src="<?php echo get_stylesheet_directory_uri() . '/images/template1-square.jpg'?>"/>
 		</a>
 		</figure>

@@ -6,16 +6,17 @@
  Text Domain: twentyeleven
  */
 
-body{
+body {
 	background: url("images/bg1.jpg") no-repeat fixed left top;
+}
+
+.site-title a:hover {
+	text-decoration: none;
 }
 
 .container-narrow {
 	margin: 0 auto;
 	max-width: 960px;
-	padding-left: 1em;
-	padding-right: 1em;
-	background-color: white;
 	bottom: 0px;
 }
 
@@ -23,33 +24,33 @@ body{
 	margin: 30px 0;
 }
 
-#masthead{
-	background: url("images/theme-header2.png") no-repeat scroll left top; 
-	border: 1px solid red;
+#masthead {
 	padding: 2em;
 }
 
-#masthead .site-title, #masthead .site-description{
+#masthead .site-title, #masthead .site-description {
 	margin-left: 160px;
 }
 
-#masthead{
+#masthead .site-description{
+	color: #555555;
+}
+
+#masthead {
 	color: white;
 }
 
-#header-meta-container{
+#header-meta-container {
 	position: relative;
-	border: 1px solid yellow;
 }
 
-#header-meta{
+#header-meta {
 	height: 10em;
 	width: 10em;
 	position: absolute;
-	top: -5em;
 }
 
-.header-meta-info{
+.header-meta-info {
 	background-color: white;
 	color: black;
 	width: 100%;
@@ -57,6 +58,26 @@ body{
 	font-size: 0.5em;
 }
 
-#colophon{
-	padding: 0.3em 0;	
+#colophon {
+	padding: 5px;
+}
+
+/**
+ *
+ */
+
+.page-nav-menu a{
+	text-decoration: none;
+}
+
+.page-nav-menu ul{
+	list-style: none;
+}
+
+.page-nav-menu ul li{
+	line-height: 30px;
+}
+
+.page-nav-menu .current_page_item{
+	font-weight: bold;	
 }

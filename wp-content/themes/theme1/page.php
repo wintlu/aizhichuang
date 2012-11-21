@@ -17,17 +17,19 @@
 
 <div class="container-fluid" style="padding-top: 10em">
     <div class="row-fluid">
-        <div class="span3">
+        <div class="span3 well">
             <div class="sidebar-nav">
+                <div>
                 	<?php 
-                	$args = array('theme_location' => 'primary',
-                				  'menu_class' => 'nav nav-list',
-                				  'container_class' => 'xxxx' );
-                	wp_nav_menu( $args ); ?>
+                	 $args = array(
+							'menu_class'  => 'page-nav-menu',
+							'show_home' => true);
+					wp_page_menu($args); ?>
+                </div>
             </div>
         </div>
 
-        <div class="span6">
+        <div class="span8 well">
             <div id="content" role="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
