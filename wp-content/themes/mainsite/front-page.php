@@ -23,33 +23,40 @@ if (!defined('ABSPATH'))
  */
 ?>
 <?php get_header(); ?>
-
-<div id="myCarousel" class="carousel slide">
-  <!-- Carousel items -->
-  <div class="carousel-inner">
-    <div class="active item">
-    	<a href="<?php echo site_url() . '/shaoliang'; ?>" >
-    		<img src="<?php echo get_stylesheet_directory_uri() . '/images/template4-thumbnail.jpg' ?>" />
-    	</a>
-    </div>
-    <div class="item">
-    	<img src="<?php echo get_stylesheet_directory_uri() . '/images/template2-thumbnail.jpg' ?>" />
-    </div>
-    <div class="item">
-    	<img src="<?php echo get_stylesheet_directory_uri() . '/images/template3-thumbnail.jpg' ?>" />
-    </div>
-  </div>
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+<div id="front-page-content">
+<div class="row">
+	<div class="span8">
+		<div id="myCarousel" class="carousel slide">
+		  <!-- Carousel items -->
+		  <div class="carousel-inner">
+		    <div class="active item">
+		    	<a href="<?php echo site_url() . '/shaoliang'; ?>" >
+		    		<img src="<?php echo get_stylesheet_directory_uri() . '/images/template4-thumbnail.jpg' ?>" />
+		    	</a>
+		    </div>
+		    <div class="item">
+		    	<img src="<?php echo get_stylesheet_directory_uri() . '/images/template2-thumbnail.jpg' ?>" />
+		    </div>
+		    <div class="item">
+		    	<img src="<?php echo get_stylesheet_directory_uri() . '/images/template3-thumbnail.jpg' ?>" />
+		    </div>
+		  </div>
+		  <!-- Carousel nav -->
+		  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		</div>
+		
+		<!--TODO: should be move to function.php-->
+		<script type="text/javascript" charset="utf-8">
+			$('#myCarousel').carousel();
+		</script>
+	</div>
+	<div id="register-btn" class="span4">
+		<a href="<?php echo wp_login_url() . '?action=register'?>">
+			<img src="<?php echo get_stylesheet_directory_uri() . '/images/create-free-account.png' ?>" />
+		</a>
+	</div>
 </div>
-
-<!--TODO: should be move to function.php-->
-<script type="text/javascript" charset="utf-8">
-	$('#myCarousel').carousel();
-</script>
-
-<hr class="lace1">
 
 <div id="site-themes-preview" class="clearfix">
 	<figure class="span3 theme-preview">
@@ -71,9 +78,7 @@ if (!defined('ABSPATH'))
 		</a>
 	</figure>
 	<figure class="span3">
-		<a href="<?php echo wp_login_url() . '?action=register'?>">
-			<img src="<?php echo get_stylesheet_directory_uri() . '/images/create-account.png'?>"/>
-		</a>
+	
 	</figure>
 </div>
 
@@ -121,7 +126,7 @@ if (!defined('ABSPATH'))
 			</li>
 		</ul>
 	</div>
-	<div class="span4">
+	<div class="span3">
 		<h4>See popular couples</h4>
 		<ul class="feature-sublist">
 			<li>
@@ -133,5 +138,5 @@ if (!defined('ABSPATH'))
 		</ul>
 	</div>
 </div>
-
+</div>
 <?php get_footer(); ?>

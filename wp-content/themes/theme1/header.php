@@ -17,8 +17,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css'?>" type="text/css"/>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/bootstrap/css/bootstrap-responsive.min.css'?>" type="text/css"/>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/bootstrap/css/bootstrap.css'?>" type="text/css"/>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/bootstrap/css/bootstrap-responsive.css'?>" type="text/css"/>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css' ?>" type="text/css"/>
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>

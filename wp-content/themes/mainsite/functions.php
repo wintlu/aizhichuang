@@ -14,7 +14,7 @@ add_action('login_head', 'aizhichuang_login_logo');
 
 
 //redirect users from mainsite admin area to their site admin area
-function mainsite_access_denied_splash() {
+function aizhichuang_access_denied_splash() {
 	if ( ! is_user_logged_in() || is_network_admin() )
 		return;
 
@@ -39,6 +39,16 @@ function mainsite_access_denied_splash() {
 	}
 }
 
-add_action( 'admin_page_access_denied', 'mainsite_access_denied_splash', 1);
+add_action( 'admin_page_access_denied', 'aizhichuang_access_denied_splash', 1);
+
+
+
+function aizhichuang__scripts_method() {
+    // wp_deregister_script( 'jquery' );
+    // wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
+    // wp_enqueue_script( 'jquery' );
+}    
+ 
+add_action('wp_enqueue_scripts', 'aizhichuang__scripts_method');
 
 ?>

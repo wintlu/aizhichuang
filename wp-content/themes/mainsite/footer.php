@@ -5,7 +5,7 @@
  * @package		The Bootstrap
  * @since		1.0.0	- 05.02.2012
  */
-
+	
 				tha_footer_before(); ?>
 				<footer id="colophon" role="contentinfo">
 					<?php tha_footer_top(); ?>
@@ -22,7 +22,6 @@
 	</body>
 </html>
 <?php
-
 
 /* End of file footer.php */
 /* Location: ./wp-content/themes/the-bootstrap/footer.php */

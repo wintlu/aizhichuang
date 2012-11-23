@@ -22,29 +22,15 @@
 		<?php tha_head_bottom(); ?>
 		<?php wp_head(); ?>
 	</head>
-	
 	<body <?php body_class(); ?>>
-		<div class="container" style="margin-top: 0px">
-			<div id="page" class="hfeed row">
-				<?php tha_header_before(); ?>
-				<header id="branding" role="banner" class="span12">
-					<?php tha_header_top();
-					wp_nav_menu( array(
-						'container'			=>	'nav',
-						'container_class'	=>	'subnav clearfix',
-						'theme_location'	=>	'header-menu',
-						'menu_class'		=>	'nav nav-pills pull-right',
-						'depth'				=>	3,
-						'fallback_cb'		=>	false,
-						'walker'			=>	new The_Bootstrap_Nav_Walker,
-					) ); ?>
+		<div id="top-ads"></div>
+		<div class="container">
+			<div id="">
+				<header id="branding" role="banner" class="clearfix">
 					<hgroup class="clearfix">
-					
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<img id="logo" src="<?php echo get_stylesheet_directory_uri() . '/images/aizhichuang-logo.png'; ?>" alt="logo"/>
 						</a>
-						
-						
 						<div id="header-controls" class="pull-right clearfix">
 							<div class="">
 								<?php
@@ -55,8 +41,7 @@
 										    echo " | ";
 										    wp_register('', ''); // Display "Site Admin" link.
 										}
-										?>							
-							 
+										?>
 							 </div>
 							<!--ad--> 
 							<a href="#">
@@ -64,51 +49,18 @@
 							</a>
 						</div>
 					</hgroup>
-					
-					<?php if ( get_header_image() ) : ?>
-					<a id="header-image" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
-					</a>
-					<?php endif; // if ( get_header_image() ) ?>
-					
 					<nav id="access" role="navigation">
-						<h3 class="assistive-text"><?php _e( 'Main menu', 'the-bootstrap' ); ?></h3>
-						<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'the-bootstrap' ); ?>"><?php _e( 'Skip to primary content', 'the-bootstrap' ); ?></a></div>
-						<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'the-bootstrap' ); ?>"><?php _e( 'Skip to secondary content', 'the-bootstrap' ); ?></a></div>
-						<?php if ( has_nav_menu( 'primary' ) OR the_bootstrap_options()->navbar_site_name OR the_bootstrap_options()->navbar_searchform ) : ?>
-						<div <?php the_bootstrap_navbar_class(); ?>>
-							<div class="navbar-inner">
-								<div class="container">
-									<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-									<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</a>
-									<?php if ( the_bootstrap_options()->navbar_site_name ) : ?>
-									<span class="brand"><?php bloginfo( 'name' ); ?></span>
-									<?php endif;?>
-									<div class="nav-collapse">
-										<?php wp_nav_menu( array(
-											'theme_location'	=>	'primary',
-											'menu_class'		=>	'nav',
-											'depth'				=>	3,
-											'fallback_cb'		=>	false,
-											'walker'			=>	new The_Bootstrap_Nav_Walker,
-										) ); 
-										if ( the_bootstrap_options()->navbar_searchform ) {
-											the_bootstrap_navbar_searchform();
-										} ?>
-								    </div>
-								</div>
-							</div>
+						<div>
+							<div class="">
+								 <?php $args = array('menu_class' => 'nav-menu-container', 'show_home' => true);
+								wp_page_menu($args); ?>
+								
+							<?php if ( the_bootstrap_options()->navbar_searchform ) {
+									the_bootstrap_navbar_searchform();
+								} ?>
+						    </div>
 						</div>
-						<?php endif; ?>
 					</nav><!-- #access -->
-					<?php if ( function_exists( 'yoast_breadcrumb' ) ) {
-						yoast_breadcrumb( '<nav id="breadcrumb" class="breadcrumb">', '</nav>' );
-					}
-					tha_header_bottom(); ?>
 				</header><!-- #branding --><?php
 				tha_header_after();
 				

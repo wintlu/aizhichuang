@@ -25,20 +25,36 @@
 
 
 body {
-	background-image: url("./images/wrap-background.png");
+	background-image: url("./images/site-bg.jpg");
+	background-color: #F3F3EA;
 	position: relative;
 }
 
-#page{
-	background-color: #F3EFE4;
+#top-ads{
+	height: 40px;
 }
 
+.container{
+	margin-bottom: 0px !important;
+}
+
+header#branding{
+	padding: 0 30px;
+}
+
+#branding hgroup{
+	margin-bottom: 0px;
+}
 #header-controls {
 	text-align: right;
 }
 
 #header-controls div {
 	margin-bottom: 1em;
+}
+
+#front-page-content{
+	margin-top: 20px;
 }
 
 @media (min-width: 768px) {
@@ -56,6 +72,10 @@ body {
 	}
 }
 
+#register-btn{
+	padding: 2em 0;
+}
+
 .theme-preview{
 	text-align: center;
 	font-weight: bold;
@@ -69,17 +89,47 @@ body {
 }
 
 #site-themes-preview{
-	background-color: white;
 	padding: 2em 0;
 }
 #site-navigation{
-	background-color: #373737;
 	padding-top: 2em;
 }
 #site-navigation h4{
-	color: #DDDDDD;
+	color: #444444;
+}
+
+#site-navigation ul{
+	list-style:none;
 }
 
 #colophon{
 	color: #AAAAAA;
 }
+
+.nav-menu-container ul{
+	list-style: none;
+	margin-left: 0px;
+}
+
+.nav-menu-container li{
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.nav-menu-container a{
+	text-decoration: none;
+	font-size: 1.2em;
+	color: #555555;
+}
+
+.nav-menu-container li.current_page_item{
+	border-bottom: 2px solid gray;
+}
+
+.nav-menu-container li:hover{
+	border-bottom: 2px solid #C1C1C1;
+}
+
