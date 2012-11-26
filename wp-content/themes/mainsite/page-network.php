@@ -38,7 +38,7 @@ function get_blog_list_for_small_network( $start = 0, $num = 10, $deprecated = '
 				?>
 				<div class="span3">
 					<a target="_blank" href="<?php echo $detail->path ?>">
-						<img src="<?php echo get_stylesheet_directory_uri() . '/images/site-image-not-found.jpg'; ?>"/>
+						<img src="<?php echo get_stylesheet_directory_uri() . '/images/site-image-not-found.png'; ?>"/>
 					</a>
 					<p>
 						<h5 style="text-align: center"><?php echo $detail->blogname ?></h5>

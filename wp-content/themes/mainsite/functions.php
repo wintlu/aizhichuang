@@ -41,14 +41,15 @@ function aizhichuang_access_denied_splash() {
 
 add_action( 'admin_page_access_denied', 'aizhichuang_access_denied_splash', 1);
 
+//actiavte a new blog
+function aizhichuang_wpmu_new_blog($blog_id)
+{
+	switch_to_blog($blog_id);
+	switch_theme('theme1', 'theme1');
+	activate_plugin('debug-bar');
+	restore_current_blog();
+}
 
-
-function aizhichuang__scripts_method() {
-    // wp_deregister_script( 'jquery' );
-    // wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
-    // wp_enqueue_script( 'jquery' );
-}    
- 
-add_action('wp_enqueue_scripts', 'aizhichuang__scripts_method');
+add_action('wpmu_new_blog', 'aizhichuang_wpmu_new_blog');
 
 ?>
