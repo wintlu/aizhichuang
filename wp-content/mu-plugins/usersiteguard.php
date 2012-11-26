@@ -15,7 +15,7 @@ function custom_login_logo() {
 add_action('login_head', 'custom_login_logo');
  
 //fix admin menus
-function remove_metabox_cms() {
+function usersiteguard_remove_metabox_cms() {
 	remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
 	remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal');
 	//remove_meta_box('dashboard_right_now', 'dashboard', 'normal'); // right now
@@ -34,7 +34,7 @@ function remove_metabox_cms() {
 /*
  * hide welcome panel
  */
-function hide_welcome_panel() {
+function usersiteguard_hide_welcome_panel() {
 	global $wp_meta_boxes;
 
 	$user_id = get_current_user_id();
@@ -44,8 +44,8 @@ function hide_welcome_panel() {
 }
 
 function usersiteguard_main() {
-	remove_metabox_cms();
-	hide_welcome_panel();
+	usersiteguard_remove_metabox_cms();
+	usersiteguard_hide_welcome_panel();
 }
 
 add_action('wp_dashboard_setup', 'usersiteguard_main');
