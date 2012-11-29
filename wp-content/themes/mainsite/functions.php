@@ -49,7 +49,33 @@ function aizhichuang_wpmu_new_blog($blog_id)
 	activate_plugin('debug-bar');
 	restore_current_blog();
 }
-
 add_action('wpmu_new_blog', 'aizhichuang_wpmu_new_blog');
+
+//signup page customization
+function aizhichuang_signup_css() { ?>
+	<style type="text/css">
+	
+	.widecolumn {margin: 0 auto; width: 600px; line-height: 1.6em;}
+	/* defaults from signup page. feel free to override. It's commented out for now.
+			.mu_register { width: 90%; margin:0 auto; }
+			.mu_register form { margin-top: 2em; }
+			.mu_register .error { font-weight:700; padding:10px; color:#333333; background:#FFEBE8; border:1px solid #CC0000; }
+			.mu_register #submit,
+				.mu_register #blog_title,
+				.mu_register #user_email, 
+				.mu_register #blogname,
+				.mu_register #user_name { width:100%; font-size: 24px; margin:5px 0; }	
+			.mu_register .prefix_address,
+				.mu_register .suffix_address {font-size: 18px;display:inline; }			
+			.mu_register label { font-weight:700; font-size:15px; display:block; margin:10px 0; }
+			.mu_register label.checkbox { display:inline; }
+			.mu_register .mu_alert { font-weight:700; padding:10px; color:#333333; background:#ffffe0; border:1px solid #e6db55; }
+	 */
+	</style>
+<?php 
+} 
+function aizhichuang_add_signup_css () { add_action('wp_head','aizhichuang_signup_css', 99); }
+add_action('signup_header','aizhichuang_add_signup_css');
+
 
 ?>
