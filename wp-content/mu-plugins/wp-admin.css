@@ -1,4 +1,13 @@
 /*container*/
+
+html{
+	background: #FCFAF3 url('images/bg-site.png') repeat top left;
+}
+
+body{
+	background: transparent url('images/bg-watermark.png') no-repeat center top;
+}
+
 #wpwrap{
 	width: 1160px;
 	margin: 0 auto;
@@ -12,24 +21,40 @@
 #adminmenuwrap #adminmenu .wp-menu-arrow{
     display: none;
 }
+
+#adminmenuwrap{
+	background-color: transparent;
+}
+
+#adminmenu li.current{
+	background: yellow !important;
+}
+
+#admin_user_meta{
+	float: right;
+	font-size: 15px;
+	margin-top: 5px;
+}
+#admin_user_meta a{
+	padding: 0px 10px;	
+	font-family: "Arial Black";
+}
+
+#wpcontent{
+	clear: both;
+}
  
 #wpcontent, #footer {
-    margin-left: 15px;
+    margin-left: 0px;
+}
+
+#wpbody{
+	clear: both;
 }
 
 #wpbody-content {
     margin: 10px 20px 20px 20px;
-    padding-top: 15px;
     width: 90%;
-
-}
-
-#screen-meta{
-	display: none;
-}
-
-#screen-meta-links {
-	display: none;
 }
 
 #adminmenuback {
@@ -52,7 +77,6 @@
     z-index: 10;
     padding-bottom: 0px;
     margin-right: -2px;
-    background-color: #FFFFFF; 
     border-style: none;
 }
 
