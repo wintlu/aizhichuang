@@ -241,6 +241,7 @@ class WP_List_Table {
 		$screen = get_current_screen();
 
 		$views = $this->get_views();
+		
 		$views = apply_filters( 'views_' . $screen->id, $views );
 
 		if ( empty( $views ) )
@@ -764,7 +765,9 @@ class WP_List_Table {
 			<?php $this->bulk_actions( $which ); ?>
 		</div>
 <?php
-		$this->extra_tablenav( $which );
+		if(apply_filters('show_extra_tablenav', true)){
+			$this->extra_tablenav( $which );
+		}
 		$this->pagination( $which );
 ?>
 

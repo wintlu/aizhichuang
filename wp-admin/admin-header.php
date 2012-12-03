@@ -107,6 +107,8 @@ if ( wp_script_is( 'customize-loader', 'queue' ) && current_user_can( 'edit_them
 ?>
 
 <div id="wpwrap">
+<?php  do_action('before_menu_header');?>
+
 <?php require(ABSPATH . 'wp-admin/menu-header.php'); ?>
 <div id="wpcontent">
 

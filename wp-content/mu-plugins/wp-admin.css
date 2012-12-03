@@ -13,11 +13,21 @@ body{
 	margin: 0 auto;
 }
 
-/*menu mod*/
-
-#wp-admin-bar-wp-logo, #wp-admin-bar-my-sites, #wp-admin-bar-new-content{
-	display: none;
+#admin-branding-logo{
+	float: left;
+	padding-left: 15px;
 }
+#admin-branding-meta{
+	float: right;
+	font-size: 15px;
+	margin-top: 15px;
+}
+#admin-branding-meta a{
+	padding: 0px 10px;	
+	font-family: "Arial Black";
+}
+
+/*menu mod*/
 #adminmenuwrap #adminmenu .wp-menu-arrow{
     display: none;
 }
@@ -28,16 +38,6 @@ body{
 
 #adminmenu li.current{
 	background: yellow !important;
-}
-
-#admin_user_meta{
-	float: right;
-	font-size: 15px;
-	margin-top: 5px;
-}
-#admin_user_meta a{
-	padding: 0px 10px;	
-	font-family: "Arial Black";
 }
 
 #wpcontent{
@@ -63,11 +63,10 @@ body{
     top: 10px;
     height: 50px;
     display: none;
-
 }
 
 /*adminmenuwrap hidden elements*/
-#collapse-menu, #adminmenushadow{
+#collapse-menu, #adminmenushadow, th.check-column{
 	display: none !important;
 }
 
@@ -86,7 +85,7 @@ body{
 
 #adminmenu{
 	width: 100%;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 #adminmenuwrap #adminmenu li {
@@ -116,6 +115,7 @@ body{
 }
 
 #adminmenuwrap #adminmenu .wp-submenu {
+	display: none;
     position: absolute;
     width: 96%;
     background: #6d6d6d;
