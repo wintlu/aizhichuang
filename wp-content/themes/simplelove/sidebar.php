@@ -4,7 +4,7 @@
             <img src="<?php echo get_template_directory_uri() . '/images/user-thumbnail.jpg'?>" alt="header small" />
             <div class="meta-info">
                <div class="meta-info-item">
-               		Wedding days: <strong> 200 </strong>days
+               		Wedding date: <strong> <?php echo get_user_option('wedding_date') ?></strong>
                </div>
             </div>
         </div>

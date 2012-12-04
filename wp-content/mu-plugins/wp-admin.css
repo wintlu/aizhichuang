@@ -26,6 +26,20 @@ body{
 	padding: 0px 10px;	
 	font-family: "Arial Black";
 }
+#admin-branding-meta-profile{
+	display: inline;
+	position: relative;
+}
+#admin-branding-meta-profile:hover{
+	display: inline;
+}
+#admin-branding-meta-profile ul{
+	display: none;
+}
+#admin-branding-meta-profile:hover ul{
+	display: block;
+	position: absolute;
+}
 
 /*menu mod*/
 #adminmenuwrap #adminmenu .wp-menu-arrow{
@@ -371,4 +385,20 @@ body{
 /*theme page*/
 #current-theme img{
 	margin-left: 0px;
+}
+
+#current-theme.has-screenshot{
+	padding-left: 0px;
+}
+
+#current-theme > a:first-child > img{
+	margin-right: 30px;
+}
+
+#filter-click{
+	display: none;
+}
+
+#current-theme > form{
+	margin-top: 20px;
 }

@@ -14,7 +14,7 @@ add_action('login_head', 'aizhichuang_login_logo');
 
 
 //redirect users from mainsite admin area to their site admin area
-function aizhichuang_access_denied_splash() {
+function aizhichuang_admin_page_access_denied() {
 	if ( ! is_user_logged_in() || is_network_admin() )
 		return;
 
@@ -39,7 +39,7 @@ function aizhichuang_access_denied_splash() {
 	}
 }
 
-add_action( 'admin_page_access_denied', 'aizhichuang_access_denied_splash', 1);
+add_action( 'admin_page_access_denied', 'aizhichuang_admin_page_access_denied', 1);
 
 //actiavte a new blog
 function aizhichuang_wpmu_new_blog($blog_id)

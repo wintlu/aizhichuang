@@ -4,12 +4,16 @@
  Author: Wint Lu
  Version: 1.6
  */
+require_once('user-admin-theme/dashboard.php');
+require_once('user-admin-theme/profile.php');
+require_once('user-admin-theme/page.php');
+require_once('user-admin-theme/comment.php');
 
 //remove unused meta boxes
 function aizhichuang_admin_init() {
 	if (is_super_admin())
 		return;
-		
+
 	//remove_meta_box('pageparentdiv','page','normal');
 	//remove_meta_box('revisionsdiv','page','normal');
 	
@@ -40,7 +44,7 @@ function aizhichuang_admin_head() {
 }
 add_action('admin_head', 'aizhichuang_admin_head');
 
-//admin page title
+//admin title
 function aizhichuang_admin_title($admin_title){
 	return str_replace('WordPress', get_dashboard_blog()->blogname, $admin_title);
 }
@@ -82,7 +86,6 @@ add_action('admin_bar_menu', 'aizhichuang_admin_bar_menu', 999);
 function aizhichuang_before_menu_header(){
 	if (is_super_admin())
 		return;
-	
 	?>
 	<header id="admin-branding">
 		<div id="admin-branding-logo">
@@ -91,7 +94,9 @@ function aizhichuang_before_menu_header(){
 			</a>
 		</div>
 		<div id="admin-branding-meta">
-			<a target="_blank" href="<?php echo home_url(); ?>">Visit Site</a>|<a href="<?php echo wp_logout_url(  network_site_url() )?>">Logout</a>
+			Welcome <code><?php echo get_userdata(get_current_user_id())->user_login; ?></code> 
+			<a target="_blank" href="<?php echo home_url(); ?>">Visit Site</a>
+			<a class="" href="<?php echo wp_logout_url(  network_site_url() )?>">Logout</a>
 		</div>
 	</header>
 	<?php
@@ -151,73 +156,4 @@ function aizhichuang_footer_text() {
 
 add_filter('admin_footer_text', 'aizhichuang_footer_text');
 
-//remove screen options
-function aizhichuang_remove_screen_options() {
-	if (is_super_admin())
-		return;
-	return false;
-}
-
-add_filter('screen_options_show_screen', 'aizhichuang_remove_screen_options');
-
-//hide dashboard meta box
-function aizhichuang_dashboard_setup() {
-	if (is_super_admin())
-		return;
-
-	remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
-	remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal');
-	remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
-	// right now
-	//remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal'); // recent comments
-	remove_meta_box('dashboard_plugins', 'dashboard', 'normal');
-	// plugins
-	remove_meta_box('dashboard_quick_press', 'dashboard', 'normal');
-	// quick press
-	//remove_meta_box('dashboard_recent_drafts', 'dashboard', 'side'); // recent drafts
-	remove_meta_box('dashboard_primary', 'dashboard', 'side');
-	// wordpress blog
-	remove_meta_box('dashboard_secondary', 'dashboard', 'side');
-	// other wordpress news
-	update_user_meta(get_current_user_id(), 'show_welcome_panel', 0);
-}
-
-add_action('wp_dashboard_setup', 'aizhichuang_dashboard_setup');
-
-//page section
-function aizhichuang_manage_pages_columns($columns) {
-	if (is_super_admin())
-		return $columns;
-
-	unset($columns['author']);
-	unset($columns['date']);
-	return $columns;
-}
-add_filter('manage_pages_columns', 'aizhichuang_manage_pages_columns');
-add_filter('bulk_actions-' . 'edit-page', '__return_empty_array');
-add_filter('show_extra_tablenav', '__return_false');
-//add_filter('views_edit-page', '__return_empty_array');
-
-//comments section
-add_filter('bulk_actions-' . 'edit-comments', '__return_empty_array' );
-//add_filter('views_edit-', '__return_empty_array');
-
-
-//profile section
-function aizhichuang_user_contactmethods($contactmethods) {
-	if (is_super_admin())
-		return $contactmethods;
-	
-	//$contactmethods['twitter'] = 'Twitter'; // Add Twitter
-	//$contactmethods['facebook'] = 'Facebook'; // Add Facebook
-	unset($contactmethods['yim']);
-	// Remove Yahoo IM
-	unset($contactmethods['aim']);
-	// Remove AIM
-	unset($contactmethods['jabber']);
-	// Remove Jabber
-
-	return $contactmethods;
-}
-add_filter('user_contactmethods', 'aizhichuang_user_contactmethods', 10, 1);
 ?>
