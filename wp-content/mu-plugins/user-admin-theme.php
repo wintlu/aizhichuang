@@ -4,10 +4,13 @@
  Author: Wint Lu
  Version: 1.6
  */
+ 
 require_once('user-admin-theme/dashboard.php');
 require_once('user-admin-theme/profile.php');
 require_once('user-admin-theme/page.php');
 require_once('user-admin-theme/comment.php');
+require_once('user-admin-theme/theme.php');	
+require_once('user-admin-theme/admin-menu.php');
 
 //remove unused meta boxes
 function aizhichuang_admin_init() {
@@ -20,11 +23,9 @@ function aizhichuang_admin_init() {
 	remove_post_type_support('page', 'comments');
 	remove_post_type_support('page', 'author');
 	remove_post_type_support('page', 'revisions');
-
-	wp_deregister_script('postbox');
 	
 	//remove admin bar
-	remove_action('in_admin_header', 'wp_admin_bar_render', 0);
+	//remove_action('in_admin_header', 'wp_admin_bar_render', 0);
 }
 
 add_action('admin_init', 'aizhichuang_admin_init');
@@ -68,15 +69,22 @@ function aizhichuang_admin_bar_menu($wp_admin_bar){
 	if (is_super_admin())
 		return;
 	
+	$wp_admin_bar->remove_node('comments');
 	$wp_admin_bar->remove_node('wp-logo');
 	$wp_admin_bar->remove_node('my-sites');
 	$wp_admin_bar->remove_node('new-content');
 	$wp_admin_bar->remove_node('site-name');
 	
 	$wp_admin_bar->add_menu( array(
-	'id' => 'mydashboard',
-	'title' => __( 'Dashboard'),
-	'href' => __(get_admin_url()),
+		'id' => 'mydashboard',
+		'title' => __( 'Dashboard'),
+		'href' => __(get_admin_url()),
+	) );
+	
+	$wp_admin_bar->add_menu( array(
+		'id' => 'visitormysite',
+		'title' => __( 'My Site'),
+		'href' => __(get_home_url()),
 	) );
 	
 }
@@ -101,7 +109,7 @@ function aizhichuang_before_menu_header(){
 	</header>
 	<?php
 }
-add_action('before_menu_header', 'aizhichuang_before_menu_header');
+//add_action('before_menu_header', 'aizhichuang_before_menu_header');
 
 function aizhichuang_admin_menu() {
 	if (is_super_admin())
@@ -112,31 +120,13 @@ function aizhichuang_admin_menu() {
 	remove_menu_page('edit.php');
 	remove_menu_page('users.php');
 	remove_menu_page('upload.php');
-	//remove_menu_page('edit-comments.php');
-
-	//apearance sub menus
-	remove_submenu_page('themes.php', 'themes.php?page=custom-header');
-	remove_submenu_page('themes.php', 'themes.php?page=custom-background');
-	remove_submenu_page('themes.php', 'widgets.php');
-	remove_submenu_page('themes.php', 'nav-menus.php');
+	//remove menus and use ours
+	remove_menu_page('edit.php?post_type=page');
+	remove_menu_page('edit-comments.php');
+	remove_menu_page('options-general.php');
+	remove_menu_page('themes.php');
 	
-	//settings sub menus
-	remove_submenu_page('options-general.php', 'options-writing.php');
-	remove_submenu_page('options-general.php', 'options-reading.php');
-	remove_submenu_page('options-general.php', 'options-discussion.php');
-	remove_submenu_page('options-general.php', 'options-media.php');
-	remove_submenu_page('options-general.php', 'options-privacy.php');
-	remove_submenu_page('options-general.php', 'options-permalink.php');
-
-	//dashborad sub menus
 	remove_submenu_page('index.php', 'my-sites.php');
-
-	//pages sub menus
-	remove_submenu_page('edit.php?post_type=page', 'post-new.php?post_type=page');
-
-	//add my menus
-
-	add_menu_page('My Profile', 'Profile', 'add_users', 'profile.php', '', 'icon');
 }
 
 add_action('admin_menu', 'aizhichuang_admin_menu');

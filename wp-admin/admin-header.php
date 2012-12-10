@@ -116,6 +116,8 @@ if ( wp_script_is( 'customize-loader', 'queue' ) && current_user_can( 'edit_them
 do_action('in_admin_header');
 ?>
 
+<?php do_action('before_admin_wpbody') ?>
+
 <div id="wpbody">
 <?php
 unset($title_class, $blog_name, $total_update_count, $update_title);

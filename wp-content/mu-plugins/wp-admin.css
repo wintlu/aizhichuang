@@ -42,18 +42,10 @@ body{
 }
 
 /*menu mod*/
-#adminmenuwrap #adminmenu .wp-menu-arrow{
-    display: none;
-}
-
 #adminmenuwrap{
-	background-color: transparent;
+	display: none;
 }
-
-#adminmenu li.current{
-	background: yellow !important;
-}
-
+ 
 #wpcontent{
 	clear: both;
 }
@@ -72,204 +64,68 @@ body{
 }
 
 #adminmenuback {
-    width: 100%;
-    position: absolute;
-    top: 10px;
-    height: 50px;
     display: none;
 }
 
-/*adminmenuwrap hidden elements*/
-#collapse-menu, #adminmenushadow, th.check-column{
-	display: none !important;
+#admin-menu-container{
+	margin: 0 auto;
+	width: 700px;
 }
 
-#adminmenuwrap {
-    width: 99.9%;
-    float: left;
-    z-index: 10;
-    padding-bottom: 0px;
-    margin-right: -2px;
-    border-style: none;
+#admin-menu-container ul{
+	list-style: none;
+	overflow: hidden;
 }
 
-#adminmenuwrap{
-    width: 100%;
+#admin-menu-container ul li{
+	float: left;
+	text-align: center;
 }
 
-#adminmenu{
-	width: 100%;
-	margin-top: 10px;
+#admin-menu-container ul li a{
+	font-size: 2em;
+	height: 110px;
+	width: 140px;
+	display: block;
+	background-image: url("images/user-admin-nav.png");
 }
 
-#adminmenuwrap #adminmenu li {
-    float: left;
-    display: block;
-    width: auto;
-    position: static;
+#admin-menu-container ul li.admin-menu-dashboard a{
+	 background-position: 0px 0px;
 }
 
-#adminmenuwrap #adminmenu li .wp-menu-image {
-    margin: 0px auto;
-    float: none;
-    overflow: hidden;
+#admin-menu-container ul li.admin-menu-dashboard a:hover, #admin-menu-container ul li.admin-menu-dashboard a.current{
+	 background-position: 0px -110px;
 }
-
-#adminmenu a.menu-top {
-    min-width: 1px !important;
-    clear: both;
-    padding: 10px 20px;
-    font-size: 30px;
+/*menu-page*/
+#admin-menu-container ul li.admin-menu-page a{
+	 background-position: -140px 0px;
 }
-
-#adminmenuwrap #adminmenu li .wp-menu-image {
-	background: none;
-	display: none;
-	height: 0px;
+#admin-menu-container ul li.admin-menu-page a:hover, #admin-menu-container ul li.admin-menu-page a.current{
+	 background-position: -140px -110px;
 }
-
-#adminmenuwrap #adminmenu .wp-submenu {
-	display: none;
-    position: absolute;
-    width: 96%;
-    background: #6d6d6d;
-    top: auto;
-    left: 40px;
-    bottom: 0px;
-    float: left;
+/*menu-comments*/
+#admin-menu-container ul li.admin-menu-comment a{
+	 background-position: -280px 0px;
 }
-
-#adminmenuwrap #adminmenu .wp-submenu ul {
-    float: left;
-    background: none;
-    padding: 2px 1px 0 1px;
+#admin-menu-container ul li.admin-menu-comment a:hover, #admin-menu-container ul li.admin-menu-comment a.current{
+	 background-position: -280px -110px;
 }
-
-#adminmenuwrap #adminmenu .wp-has-current-submenu .wp-submenu {
-    z-index: 1;
+/*menu-theme*/
+#admin-menu-container ul li.admin-menu-theme a{
+	 background-position: -420px 0px;
 }
-
-#adminmenuwrap #adminmenu .wp-submenu.sub-open {
-    z-index: 2;
-    background: #333;
+#admin-menu-container ul li.admin-menu-theme a:hover, #admin-menu-container ul li.admin-menu-theme a.current{
+	 background-position: -420px -110px;
 }
-
-#adminmenu .wp-submenu .wp-submenu-wrap {
-
-    width: 100% !important;
+/*menu-settings*/
+#admin-menu-container ul li.admin-menu-settings a{
+	 background-position: -560px 0px;
 }
-
-#adminmenu .wp-submenu .wp-submenu-wrap li {
-
-    margin: 0px;
+#admin-menu-container ul li.admin-menu-settings a:hover, #admin-menu-container ul li.admin-menu-settings a.current{
+	 background-position: -560px -110px;
 }
-
-#adminmenu .wp-submenu .wp-submenu-wrap li {
-    padding: 3px 15px;
-}
-
-#adminmenu .wp-submenu .wp-submenu-wrap li:hover {
-    background: #7b7b7b;
-}
-
-#adminmenu .wp-submenu .wp-submenu-wrap li.current {
-    background: #fff;
-
-}
-
-#adminmenu  .wp-has-current-submenu .wp-submenu .wp-submenu-wrap li a {
-    color: #fff;
-    background: none;
-    padding: 3px 0px;
-}
-
-#adminmenu .wp-submenu .wp-submenu-wrap li.wp-menu-open a {
-    color: #fff;
-    background: none;
-    display: block;
-    padding: 3px 0px;
-    width: 100%;
-    text-align: center;
-}
-
-#adminmenu .wp-submenu .wp-submenu-wrap li.current a {
-    color: #333;
-    background: none;
-    padding: 3px 0px;
-
-}
-
-/*menu plugin mod*/
-#adminmenu #menu-plugins .update-plugins {
-    margin-top: -30px;
-    margin-left: -5px;
-}
-
-/*hover-efect*/
-#adminmenuwrap #adminmenu li.menu-top:hover, #adminmenuwrap #adminmenu li.menu-top.wp-hover-menu {
-    position: relative;
-    overflow: visible;
-}
-
-#adminmenuwrap #adminmenu li.wp-menu-open:hover, #adminmenuwrap #adminmenu li.wp-menu-open.wp-hover-menu {
-    position: static;
-}
-
-#adminmenuwrap #adminmenu li.menu-top:hover .wp-submenu, #adminmenuwrap #adminmenu li.menu-top.wp-hover-menu .wp-submenu {
-    left: 100%;
-    top: 20px;
-    bottom: auto;
-}
-
-#adminmenuwrap #adminmenu li.menu-top:hover .wp-submenu li, #adminmenuwrap #adminmenu li.menu-top.wp-hover-menu .wp-submenu li {
-    clear: both;
-    float: left;
-}
-
-#adminmenuwrap #adminmenu li.wp-menu-open:hover .wp-submenu, #adminmenuwrap #adminmenu li.wp-menu-open.wp-hover-menu .wp-submenu {
-    left: 40px;
-    top: auto;
-    bottom: 0px;
-}
-
-#adminmenuwrap #adminmenu li.wp-menu-open:hover .wp-submenu li, #adminmenuwrap #adminmenu li.wp-menu-open.wp-hover-menu .wp-submenu li {
-    clear: none;
-    float: left;
-}
-
-#adminmenuwrap #adminmenu li.wp-not-current-submenu:hover .wp-submenu, #adminmenuwrap #adminmenu li.wp-not-current-submenu.wp-hover-menu .wp-submenu {
-    width: 140px;
-    padding: 0px;
-}
-
-#adminmenuwrap #adminmenu li.wp-not-current-submenu:hover .wp-submenu, #adminmenuwrap #adminmenu li.wp-not-current-submenu.wp-hover-menu .wp-submenu {
-    width: 140px;
-    padding: 0px;
-}
-
-#adminmenuwrap #adminmenu li.wp-not-current-submenu:hover .wp-submenu .wp-submenu-wrap, #adminmenuwrap #adminmenu li.wp-not-current-submenu.wp-hover-menu .wp-submenu .wp-submenu-wrap {
-    float: left;
-    background: none;
-    border: none;
-    margin: 0px;
-
-}
-
-#adminmenuwrap #adminmenu li.wp-not-current-submenu:hover .wp-submenu ul li, #adminmenuwrap #adminmenu li.wp-not-current-submenu.wp-hover-menu .wp-submenu ul li {
-
-    padding: 0px;
-}
-
-#adminmenuwrap #adminmenu li.wp-not-current-submenu:hover .wp-submenu ul li a, #adminmenuwrap #adminmenu li.wp-not-current-submenu.wp-hover-menu .wp-submenu ul li a {
-    padding: 2px 10px;
-    width: 120px;
-    color: #fff;
-}
-
-#adminmenuwrap #adminmenu li.wp-not-current-submenu:hover .wp-submenu ul li a:hover, #adminmenuwrap #adminmenu li.wp-not-current-submenu.wp-hover-menu .wp-submenu ul li a:hover {
-
-    color: #21759B;
-}
+ 
 
 /*dashboard box*/
 

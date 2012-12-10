@@ -216,12 +216,14 @@ if ( ! current_user_can( 'switch_themes' ) ) {
 
 <?php if ( !empty( $_REQUEST['s'] ) || !empty( $_REQUEST['features'] ) || $wp_list_table->has_items() ) : ?>
 
+<?php if(apply_filters('show_themes_search_box', true)) : ?>
 <p class="search-box">
 	<label class="screen-reader-text" for="theme-search-input"><?php _e('Search Installed Themes'); ?>:</label>
 	<input type="search" id="theme-search-input" name="s" value="<?php _admin_search_query(); ?>" />
 	<?php submit_button( __( 'Search Installed Themes' ), 'button', false, false, array( 'id' => 'search-submit' ) ); ?>
 	<a id="filter-click" href="?filter=1"><?php _e( 'Feature Filter' ); ?></a>
 </p>
+<?php endif; ?>
 
 <div id="filter-box" style="<?php if ( empty($_REQUEST['filter']) ) echo 'display: none;'; ?>">
 <?php $feature_list = get_theme_feature_list(); ?>

@@ -1,6 +1,7 @@
 #Project specific
 wp-config.php
 *.log
+wp-content/blogs.dir/
 
 #################
 ## Eclipse

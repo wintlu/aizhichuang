@@ -41,12 +41,32 @@ function aizhichuang_admin_page_access_denied() {
 
 add_action( 'admin_page_access_denied', 'aizhichuang_admin_page_access_denied', 1);
 
+function reset_default_home_page(){
+	$_POST['post_type']    = 'page';
+	$_POST['post_content'] = 'My home page';
+	$_POST['post_parent']  = 0;
+	//$_POST['post_author']  = $user_ID;
+	$_POST['post_status']  = 'publish';
+	$_POST['post_title']   = 'Home';
+	$home_id = wp_insert_post($_POST);
+	
+	if(is_wp_error($home_id))
+		return;
+	
+	//set home page to static page	
+	update_option('show_on_front', 'page');
+	update_option('page_on_front', $home_id);
+}
+
 //actiavte a new blog
 function aizhichuang_wpmu_new_blog($blog_id)
 {
 	switch_to_blog($blog_id);
 	switch_theme('theme1', 'theme1');
-	activate_plugin('debug-bar');
+	//activate_plugin('debug-bar');
+
+	//insert default home page
+	reset_default_home_page();
 	restore_current_blog();
 }
 add_action('wpmu_new_blog', 'aizhichuang_wpmu_new_blog');
