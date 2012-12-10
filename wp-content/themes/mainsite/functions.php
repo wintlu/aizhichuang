@@ -62,7 +62,7 @@ function reset_default_home_page(){
 function aizhichuang_wpmu_new_blog($blog_id)
 {
 	switch_to_blog($blog_id);
-	switch_theme('theme1', 'theme1');
+	switch_theme('simplelove', 'simplelove');
 	//activate_plugin('debug-bar');
 
 	//insert default home page
