@@ -13,7 +13,7 @@
     <div class="sidebar-nav">
         <div>
             <?php
-			$args = array('menu_class' => 'page-nav-menu', 'show_home' => true);
+			$args = array('menu_class' => 'page-nav-menu');
 			wp_page_menu($args);
  ?>
         </div>

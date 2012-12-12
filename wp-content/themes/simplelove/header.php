@@ -29,6 +29,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="container-narrow">
+	<?php do_action('simplelove_before_header'); ?>
 	<header id="masthead" class="site-header" role="banner">
 		<div>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
