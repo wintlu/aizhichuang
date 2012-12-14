@@ -1,0 +1,107 @@
+/*
+ Theme Name: Love Island
+ Author: aizhichuang.com
+ Version: 1.0
+ Description: A simple, clean but beatuful theme to show your love story 
+ Tags: light, simple
+ Text Domain: loveisland
+ */
+
+body {
+	background: #2F6F92;
+}
+
+a.light-title , .nav-menu-wrapper a{
+	text-decoration: none;
+	color: #99FFFF;
+	text-shadow: 5px;
+}
+a.light-title:hover, .nav-menu-wrapper a:hover{
+	color: #99EEEE;
+}
+
+#page-background{
+	margin: 0 auto;
+	width: 1280px;
+	background: url("images/80006_top.jpg") no-repeat top left;
+	overflow: hidden;
+}
+
+#page-wrapper{
+	width: 1004px;
+	margin: 0 auto;
+}
+
+#page, #masthead{
+	width: 900px;
+	margin: 0 auto;
+}
+
+#page-lace-wrapper{
+	background: url("images/lace_side.png") repeat-y left top;
+}
+
+#masthead {
+	background: url("images/lace_hd_ft.png") no-repeat 0 bottom;
+	height: 200px;	
+	padding: 20px 0;
+	position: relative;
+}
+
+.nav-menu-wrapper, #nav-menu-background{
+	position: absolute;
+	left: 10px;
+	bottom: 0px;
+}
+.nav-menu-wrapper{
+	bottom: 25px;
+}
+
+.nav-menu-wrapper a{
+	display: block;
+	padding: 5px;
+	text-shadow: 0 0 0.2em #87F;
+}
+
+.nav-menu-wrapper ul{
+	list-style: none;
+}
+
+.nav-menu-wrapper ul li{
+	float: left;
+}
+
+.nav-menu-wrapper .current_page_item{
+	font-weight: bold;	
+}
+
+#content{
+	min-height: 300px;
+}
+
+#page-lace-bottom{
+	height: 100px;
+	width: 1000px;
+	background: url("images/lace_hd_ft.png") no-repeat -1000px 0;
+}
+
+#colophon{
+	text-align: center;
+}
+#colophon a{
+	color: #FFF4E5;
+	text-shadow: 0 0 0.2em white; 
+}
+
+/*comments*/
+.commentlist{
+	list-style: none;
+	margin-left: 0px;
+}
+.commentlist {
+	
+}
+
+#commentform textarea{
+	width: 410px;	
+}

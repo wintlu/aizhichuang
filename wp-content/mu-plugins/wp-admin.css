@@ -258,3 +258,8 @@ body{
 #current-theme > form{
 	margin-top: 20px;
 }
+
+/*comments page*/
+#commentstatusdiv .meta-options label:last-child{
+	display: none;
+}

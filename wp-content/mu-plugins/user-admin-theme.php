@@ -20,7 +20,7 @@ function aizhichuang_admin_init() {
 	//remove_meta_box('pageparentdiv','page','normal');
 	//remove_meta_box('revisionsdiv','page','normal');
 	
-	remove_post_type_support('page', 'comments');
+	//remove_post_type_support('page', 'comments');
 	remove_post_type_support('page', 'author');
 	remove_post_type_support('page', 'revisions');
 	
