@@ -16,24 +16,19 @@
 
 get_header(); ?>
 
-<section id="primary" class="span8">
-	<div id="content" role="main">
-		<?php
-		if ( have_posts() ) {
-			while ( have_posts() ) {
-				the_post();
-				get_template_part( '/partials/content', get_post_format() );
-			}
-		}
-		else {
-			get_template_part( '/partials/content', 'not-found' );
-		}
-		?>
-	</div><!-- #content -->
-</section><!-- #primary -->
-
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12 well">
+            <div id="content" role="main">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( 'content', 'page' ); ?>
+					<?php comments_template( '', true ); ?>
+				<?php endwhile; // end of the loop. ?>
+			</div><!-- #content -->
+        </div>
+    </div>
+</div>
 <?php
-get_sidebar();
 get_footer();
 
 
